@@ -1,0 +1,5 @@
+# carthage update --platform macos --cache-builds
+
+github "mxcl/PromiseKit" ~> 6.0
+github "PromiseKit/Foundation" ~> 3.3
+github "utahiosmac/Marshal" ~> 1.0

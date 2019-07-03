@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C614A00A22CC0E2E001A9734 /* PMKFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614A00822CC0E2E001A9734 /* PMKFoundation.framework */; };
+		C614A00B22CC0E2E001A9734 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C614A00922CC0E2E001A9734 /* PromiseKit.framework */; };
+		C614A01222CC4C7C001A9734 /* PMKFoundation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C614A00822CC0E2E001A9734 /* PMKFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C614A01322CC4C7C001A9734 /* PromiseKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C614A00922CC0E2E001A9734 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C6B792FD22C5A2B2002038C8 /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B792FC22C5A2B2002038C8 /* Imgur.swift */; };
+		C6B7930122C5A418002038C8 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = C6B7930022C5A418002038C8 /* Cartfile */; };
+		C6BA4B6022CCD19800F3442E /* Marshal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6BA4B5F22CCD19800F3442E /* Marshal.framework */; };
+		C6BA4B6122CCD3EF00F3442E /* Marshal.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C6BA4B5F22CCD19800F3442E /* Marshal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C6EDBD8022C593CB002CDF99 /* SwiftImgur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EDBD7622C593CB002CDF99 /* SwiftImgur.framework */; };
 		C6EDBD8522C593CB002CDF99 /* ImgurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EDBD8422C593CB002CDF99 /* ImgurTests.swift */; };
 		C6EDBD8722C593CB002CDF99 /* Imgur.h in Headers */ = {isa = PBXBuildFile; fileRef = C6EDBD7922C593CB002CDF99 /* Imgur.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,7 +30,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C614A01122CC4C6F001A9734 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C6BA4B6122CCD3EF00F3442E /* Marshal.framework in Copy Frameworks */,
+				C614A01222CC4C7C001A9734 /* PMKFoundation.framework in Copy Frameworks */,
+				C614A01322CC4C7C001A9734 /* PromiseKit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C614A00822CC0E2E001A9734 /* PMKFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKFoundation.framework; path = Carthage/Build/Mac/PMKFoundation.framework; sourceTree = "<group>"; };
+		C614A00922CC0E2E001A9734 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/Mac/PromiseKit.framework; sourceTree = "<group>"; };
+		C6B792FC22C5A2B2002038C8 /* Imgur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
+		C6B7930022C5A418002038C8 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		C6B7930222C5A42B002038C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C6B7930322C5A42B002038C8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C6BA4B5F22CCD19800F3442E /* Marshal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Marshal.framework; path = Carthage/Build/Mac/Marshal.framework; sourceTree = "<group>"; };
 		C6EDBD7622C593CB002CDF99 /* SwiftImgur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftImgur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6EDBD7922C593CB002CDF99 /* Imgur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Imgur.h; sourceTree = "<group>"; };
 		C6EDBD7A22C593CB002CDF99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BA4B6022CCD19800F3442E /* Marshal.framework in Frameworks */,
+				C614A00A22CC0E2E001A9734 /* PMKFoundation.framework in Frameworks */,
+				C614A00B22CC0E2E001A9734 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,11 +84,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C614A00722CC0E2E001A9734 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6BA4B5F22CCD19800F3442E /* Marshal.framework */,
+				C614A00822CC0E2E001A9734 /* PMKFoundation.framework */,
+				C614A00922CC0E2E001A9734 /* PromiseKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C6EDBD6C22C593CB002CDF99 = {
 			isa = PBXGroup;
 			children = (
+				C6B7930322C5A42B002038C8 /* LICENSE */,
+				C6B7930222C5A42B002038C8 /* README.md */,
+				C6B7930022C5A418002038C8 /* Cartfile */,
 				C6EDBD7822C593CB002CDF99 /* SwiftImgur */,
 				C6EDBD8322C593CB002CDF99 /* SwiftImgurTests */,
+				C614A00722CC0E2E001A9734 /* Frameworks */,
 				C6EDBD7722C593CB002CDF99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +121,7 @@
 			children = (
 				C6EDBD7922C593CB002CDF99 /* Imgur.h */,
 				C6EDBD7A22C593CB002CDF99 /* Info.plist */,
+				C6B792FC22C5A2B2002038C8 /* Imgur.swift */,
 			);
 			path = SwiftImgur;
 			sourceTree = "<group>";
@@ -125,6 +174,7 @@
 				C6EDBD7B22C593CB002CDF99 /* Sources */,
 				C6EDBD7C22C593CB002CDF99 /* Frameworks */,
 				C6EDBD7D22C593CB002CDF99 /* Resources */,
+				C614A01122CC4C6F001A9734 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +198,7 @@
 				TargetAttributes = {
 					C6EDBD7522C593CB002CDF99 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					C6EDBD7E22C593CB002CDF99 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -177,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B7930122C5A418002038C8 /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B792FD22C5A2B2002038C8 /* Imgur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +393,7 @@
 		C6EDBD8B22C593CB002CDF99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -348,6 +402,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SwiftImgur/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -359,6 +417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.latencyzero.Imgur;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -366,6 +425,7 @@
 		C6EDBD8C22C593CB002CDF99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -374,6 +434,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SwiftImgur/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -392,10 +456,15 @@
 		C6EDBD8E22C593CB002CDF99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = H6F2W964VK;
-				INFOPLIST_FILE = ImgurTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SwiftImgurTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -410,10 +479,15 @@
 		C6EDBD8F22C593CB002CDF99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = H6F2W964VK;
-				INFOPLIST_FILE = ImgurTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SwiftImgurTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

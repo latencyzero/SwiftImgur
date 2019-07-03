@@ -7,28 +7,62 @@
 //
 
 import XCTest
-@testable import Imgur
+@testable import SwiftImgur
 
-class ImgurTests: XCTestCase {
+import PromiseKit
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+/**
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+	https://imgur.com/#access_token=03ec22b840a07423614b2dee0564e5a93c499bc4&expires_in=315360000&token_type=bearer&refresh_token=34a8357807e88cc386b405500575aabcc28291f7&account_username=JetForMe&account_id=21792681
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+*/
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+class
+ImgurTests: XCTestCase
+{
+	override
+	func
+	setUp()
+	{
+	}
 
+	override
+	func
+	tearDown()
+	{
+	}
+
+	func
+	testCreaetOauth2URL()
+	{
+		let im = Imgur(id: "84bfefee03d957a", secret: "8cf87c61e927a90a70e7cc1c347957761784548f")
+		let url = im.oauthURL()
+		print(url)
+	}
+	
+	func
+	testCompleteOAuth2()
+		throws
+	{
+		let exp = expectation(description: "testCompleteOAuth2");
+		
+		let im = Imgur(id: "84bfefee03d957a", secret: "8cf87c61e927a90a70e7cc1c347957761784548f")
+		try im.handleOauth2(callback: "imager://oauth2#access_token=ac73d84cd37cdc9ad54a26e9e177582540e8835e&expires_in=315360000&token_type=bearer&refresh_token=ee72885c475f927242aebc356d9d0296f5232f7f&account_username=JetForMe&account_id=21792681")
+		
+		firstly
+		{
+			try im.albums(user: "JetForMe", page: 0)
+		}
+		.done
+		{ inAlbums in
+			print("Albums: \(inAlbums)")
+			exp.fulfill()
+		}
+		.catch
+		{ inError in
+			XCTFail("Error: \(inError)")
+		}
+		
+		waitForExpectations(timeout: 10.0)
+	}
 }
